@@ -1,0 +1,36 @@
+/* Colors */
+
+/* Volcanic Rock */
+--gray-500 {
+	color: #2F2832;
+}
+
+/* Avocado */
+--green-300 {
+	color: #A7BF2E;
+}
+
+/* Coconut Milk */
+--white {
+	color: #FAF8ED;
+}
+
+/* Magma Red */
+--red-300 {
+	color: #F95A37;
+}
+
+/* Pineapple Yellow */
+--yellow-300 {
+	color: #FEE332	;
+}
+
+/* Bougainvillea Purple */
+--purple-300 {
+	color: #EB35DF;
+}
+
+/* Tropical Coast */
+--blue-300 {
+	color: #27b2d5;
+}

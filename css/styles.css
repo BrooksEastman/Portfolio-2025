@@ -1,0 +1,359 @@
+/* Portfolio - Brooks Eastman */
+
+
+
+/* Colors */
+:root {
+    /* White */
+	--white: #FAF8ED;
+    /* Gray 100 */
+    --gray-100: #E0E0E0;
+    /* Gray 200 */
+    --gray-200: #BDBDBD;
+    /* Gray 300 */
+    --gray-300: #828282;
+    /* Gray 400 */
+    --gray-400: #675E6B;
+	/* Gray 500 */
+	--gray-500: #2F2832;
+    /* Gray 600 */
+    --gray-600: #221F24;
+	/* Green 300 */
+	--green-300: #A7BF2E;
+	/* Red 300 */
+	--red-300: #F95A37;
+	/* Yellow 300 */
+	--yellow-300: #FEE332;
+	/* Purple 300 */
+	--purple-300: #EB35DF;
+	/* Blue 300 */
+	--blue-300: #27b2d5;
+}
+
+
+/* General Styles */
+html,body {
+	height: 100%;
+	margin: 0;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+	background-image: url(../img/bg.svg);
+	background-repeat: repeat-y;
+	background-size: cover;
+	background-color: var(--gray-500);
+	color: var(--white);
+	line-height: 1.3;
+	transition: font-size 3s;
+}
+h1,h2,h3,h4 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+	font-size: 38px;
+	font-weight: 700;
+}
+
+.btn {
+    background-color: var(--green-300);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: inline-block;
+}
+
+
+/* Header */
+header {
+    background-color: var(--gray-600);
+    padding: 48px 0;
+}
+.navbar .navbar-nav.nav-be .nav-link {
+    color: var(--white);
+    font-size: 18px;
+    margin-left: 8px;
+    padding: 12px 24px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.navbar .navbar-nav.nav-be .nav-item .nav-link.active {
+    position: relative;
+    pointer-events: none;
+}
+.navbar .navbar-nav.nav-be .nav-item:has(.nav-link.active) {
+    background-color: var(--gray-500);
+}
+.navbar .navbar-nav.nav-be .nav-item .nav-link:hover {
+    color: var(--green-300);
+    background-color: var(--gray-500);
+}
+.navbar.navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+}
+.navbar .navbar-nav.nav-be .nav-link.active::after {
+    content: "/";
+    display: inline-block;
+    color: var(--green-300);
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    left: 7px;
+    top: 9px;
+}
+.hamburger-box .hamburger-inner, .hamburger-box .hamburger-inner::before, .hamburger-box .hamburger-inner::after, .hamburger.is-active .hamburger-box .hamburger-inner, .hamburger.is-active .hamburger-box .hamburger-inner::before, .hamburger.is-active .hamburger-box .hamburger-inner::after {
+    background-color: var(--white);
+}
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:focus:not(:focus-visible) {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.navbar-collapse .navbar-nav .nav-item {
+    border-bottom: 1px solid var(--gray-500);
+}
+@media (min-width: 768px) {
+    .navbar-collapse .navbar-nav .nav-item {
+        border: none;
+    }
+    .navbar .navbar-nav.nav-be .nav-link.active::after {
+        left: 9px;
+    }
+    .navbar .navbar-nav.nav-be .nav-item:has(.nav-link.active) {
+        background-color: transparent;
+    }
+}
+
+
+/* Main */
+main.container-fluid {
+    padding: 96px 0;
+}
+
+main .container {
+    background-color: var(--gray-500);
+    padding: 48px;
+}
+
+.hero-section {
+    padding: 0 0 120px;
+}
+
+.work-item {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--white);
+    border-radius: 0;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    text-decoration: none;
+    overflow: hidden;
+}
+.work-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+}
+.work-item-info {
+    width: 100%;
+    background: rgb(34 31 36 / 90%);
+    padding: 24px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.work-item-info h4 {
+    font-size: 18px;
+    color: var(--gray-200);
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    margin-bottom: 12px;
+}
+.work-item-info h3 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+.work-item-info h2 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 4px;
+}
+.work-item-info p {
+    font-size: 18px;
+}
+.work-item.coming-soon {
+    position: relative;
+    pointer-events: none;
+    opacity: .5;
+}
+.work-item.coming-soon::after {
+    content: "Coming Soon";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--red-300);
+    color: var(--white);
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* About */
+.big-quote-section {
+    text-align: center;
+    margin-bottom: 120px;
+}
+.big-quote-section .quote-container {
+    display: inline-block;
+    max-width: 1080px;
+    padding: 48px;
+    border-radius: 0;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background-color: var(--gray-500);
+}
+.big-quote-section .quote-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 16px;
+}
+.big-quote-section .quote-container h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--gray-200);
+}
+.about-section {
+    margin-bottom: 120px;
+}
+.about-section .about-photo {
+    margin-right: 48px;
+}
+.about-section .about-content p{
+    margin-bottom: 24px;
+}
+
+
+/* Case Studies */
+main.container-fluid.case-study {
+    padding-top: 0;
+}
+.case-study-hero-section {
+    padding: 96px 0 96px;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 120px;
+}
+.case-study-hero-section h1 {
+    font-size: 72px;
+    font-weight: 900;
+    font-family: "Raleway", sans-serif;
+    color: var(--white);
+}
+.case-study-content-section {
+    margin-bottom: 120px;
+}
+.case-study-content-section p {
+    margin-bottom: 24px;
+}
+.case-study-content-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green-300);
+    margin-bottom: 16px;
+}
+.case-study-content-section ol, .case-study-content-section ul {
+    margin-bottom: 48px;
+    padding-left: 20px;
+}
+.case-study-content-section ul li, .case-study-content-section ol li {
+    margin-bottom: 8px;
+}
+.case-study-content-section .details-col {
+    margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .case-study-content-section .details-col {
+        padding-left: 27px;
+        border-left: 1px solid var(--gray-300);
+        margin-bottom: 0;
+    }
+}
+
+.case-study-image-section {
+    text-align: center;
+    margin-bottom: 120px;
+}
+.case-study-image-section blockquote {
+    font-style: italic;
+    color: var(--gray-100);
+    margin: 48px auto 48px;
+    max-width: 640px;
+    background-color: var(--gray-400);
+    padding: 24px;
+    border-radius: 8px;
+}
+.case-study-image-section .col {
+    margin-bottom: 48px;
+}
+
+
+
+/* Contact CTA */
+.contact-section {
+    text-align: center;
+    margin: 120px 0;
+}
+.contact-section h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--green-300);
+}
+.contact-section h2 {
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 32px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--gray-600);
+    padding: 48px 0 0;
+}
+footer .footer-info .slash {
+    color: var(--green-300);
+    font-weight: 700;
+    padding: 0 6px;
+}
+footer .footer-links {
+    text-align: right;
+}
+footer .footer-links a {
+    margin-left: 16px;
+}
+footer .copyright {
+    color: var(--gray-200);
+    font-size: 14px;
+    text-align: center;
+    padding: 24px 0;
+    margin: 0;
+}
