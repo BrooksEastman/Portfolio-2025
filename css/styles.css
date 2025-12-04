@@ -321,6 +321,11 @@ main.container-fluid.case-study {
 }
 .case-study-content-section .details-col {
     margin-bottom: 60px;
+    max-width: 300px;
+}
+.case-study-content-section .side-image {
+    text-align: center;
+    margin-bottom: 48px;
 }
 
 @media (min-width: 768px) {
