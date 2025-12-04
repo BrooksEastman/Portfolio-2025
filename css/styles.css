@@ -64,6 +64,13 @@ h1 {
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
     display: inline-block;
+    filter: brightness(1);
+    transition: 0.3s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--green-300);
+    color: var(--white);
+    filter: brightness(1.1);
 }
 
 
@@ -154,6 +161,11 @@ main .container {
     border-bottom-left-radius: 24px;
     text-decoration: none;
     overflow: hidden;
+    scale: 1;
+    transition: scale 0.3s ease-in-out;
+}
+.work-item:hover {
+    scale: 1.03;
 }
 .work-item img {
     position: absolute;
