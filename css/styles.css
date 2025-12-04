@@ -142,9 +142,10 @@ main .container {
     padding: 0 0 120px;
 }
 
+/*Work Items */
 .work-item {
     position: relative;
-    min-height: 540px;
+    /* min-height: 540px; */
     display: flex;
     align-items: flex-end;
     background-color: var(--white);
@@ -210,6 +211,27 @@ main .container {
     border-radius: 40px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+}
+
+@media (min-width: 1400px){
+    .work-item {
+        min-height: 540px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399.9px) {
+    .work-item {
+        min-height: 525px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.9px) {
+    .work-item {
+        min-height: 430px;
+    }
+}
+@media (min-width: 576px) and (max-width: 991.9px) {
+    .work-item {
+        min-height: 457px;
+    }
 }
 
 
