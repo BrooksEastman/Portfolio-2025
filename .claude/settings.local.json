@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command ' *)",
+      "Bash(where cwebp *)",
+      "Bash(where magick *)",
+      "Bash(where ffmpeg *)",
+      "PowerShell(Set-Location \"g:\\\\My Drive\\\\BROOKSEASTMAN\\\\Portfolio-2025\"; powershell.exe -ExecutionPolicy Bypass -File \"_webp_update.ps1\")"
+    ]
+  }
+}

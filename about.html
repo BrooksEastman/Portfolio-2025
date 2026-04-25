@@ -78,7 +78,10 @@
             <section class="about-section">
                 <div class="row">
                     <div class="col-auto about-image-col">
-                        <img src="img/about-photo.png" alt="Photo of Brooks Eastman" class="about-photo"/>
+                        <picture>
+                            <source srcset="img/about-photo.webp" type="image/webp">
+                            <img src="img/about-photo.png" alt="Photo of Brooks Eastman" class="about-photo" loading="lazy" width="250" height="324"/>
+                        </picture>
                     </div>
                     <div class="col about-stats-col">
                         <div class="about-content">
