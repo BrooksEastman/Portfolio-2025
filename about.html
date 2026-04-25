@@ -87,6 +87,7 @@
                             <p>In my free time, I like to work on personal projects like building out my camper van, playing music, photo and videography, and spending time with my cat. I”m always ready to collaborate with creative individuals, feel free to reach out!</p>
                         </div>
                     </div>
+                </div>
             </section>
         </div>
     </main>
@@ -145,14 +146,12 @@
         if (yearEl) yearEl.textContent = new Date().getFullYear();
     </script>
     <script>
-        // Look for .hamburger
         var hamburger = document.querySelector(".hamburger");
-        // On click
-        hamburger.addEventListener("click", function() {
-            // Toggle class "is-active"
-            hamburger.classList.toggle("is-active");
-            // Do something else, like open/close menu
-        });
+        if (hamburger) {
+            hamburger.addEventListener("click", function() {
+                hamburger.classList.toggle("is-active");
+            });
+        }
     </script>
     <script src="js/contact.js"></script>
 </body>
