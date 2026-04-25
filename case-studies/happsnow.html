@@ -179,7 +179,27 @@
         <h3>Have a project in mind?</h3>
         <h2>Let's get to work!</h2>
         <p>Send me a message about your awesome project</p>
-        <a href="mailto:brookseastman@gmail.com" class="btn contact-cta">Get in touch</a>
+        <form class="contact-form" id="contactForm" novalidate>
+            <div class="contact-form-row">
+                <div class="contact-form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="Your name" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div class="contact-form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <div class="contact-honeypot" aria-hidden="true">
+                <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="contact-form-status" id="contactStatus" role="alert"></div>
+            <button type="submit" class="btn contact-cta">Send Message</button>
+        </form>
     </section>
 
     <footer class="">
@@ -218,5 +238,6 @@
             // Do something else, like open/close menu
         });
     </script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
