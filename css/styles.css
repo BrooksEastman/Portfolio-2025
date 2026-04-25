@@ -31,6 +31,24 @@
 }
 
 
+/* Skip Navigation */
+.skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 9999;
+    padding: 12px 24px;
+    background: var(--green-300);
+    color: var(--white);
+    text-decoration: none;
+    border-bottom-right-radius: 8px;
+    transition: top 0.2s;
+}
+.skip-nav:focus {
+    top: 0;
+}
+
+
 /* General Styles */
 html,body {
 	height: 100%;
